@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="segVirtual.js"></script>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        .inserir{
+            color:blue;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Festa VIP</h1>
+
+    <h2>Bem vindo a festa senhor(a):</h2>
+
+    <input type="text" name="" id="nomeConvidado" placeholder="Digite seu nome..." class="inserir">
+
+    <h2>Quem te convidou para essa festa?</h2>
+
+
+    <input type="text" name="" id="nomeConvite" class="inserir" placeholder="Quem te convidou?" value="ivair">
+
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <h1>Você está permitido a entrar?</h1>
+
+    <p id="result">Pesquisando...</p>
+</body>
+</html>

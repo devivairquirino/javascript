@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="logicos.js"></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table,th,td{
+            border-collapse: collapse;
+            width:300px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .true{
+            color:green;
+            text-decoration: underline;
+        }
+        .false{
+            color:red;
+            text-decoration: underline;
+        }
+        .operador{
+            text-decoration: underline;color:orangered;
+        }
+
+        
+    </style>
+    <title>Operadores Lógicos</title>
+</head>
+<body>
+    <h1>Operadores Lógicos</h1>
+    <h2>Operador 'E' &&:</h2>
+    <table >
+        <tr>
+            <th class="operador">&&</th>
+            <th>A</th>
+            
+            <th>B</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td ></td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+        </tr>
+    </table>
+    <h2>Operador 'OU' ||</h2>
+    <table>
+        <tr>
+            <th class="operador">||</th>
+            <th>A</th>
+            <th>B</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+
+        </tr>
+        
+    </table>
+    <h2>Operador 'NOT' !</h2>
+    <h3>Com o operador &&:</h3>
+    <table >
+        <tr>
+            <th class="operador">!E</th>
+            <th>A</th>
+            
+            <th>B</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td ></td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+        </tr>
+    </table>
+    <h3>Com o operador ||</h3>
+    <table>
+        <tr>
+            <th class="operador">!OU</th>
+            <th>A</th>
+            <th>B</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+            <td class="false">false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="false">false</td>
+            <td class="false">false</td>
+            <td class="true">true</td>
+
+        </tr>
+</body>
+</html>
