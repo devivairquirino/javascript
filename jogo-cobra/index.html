@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <style>
+        #canvas {
+                background-color: #eee;
+                border: 1px solid #999;
+            }
+    </style>
+    <script>
+// Create the Snake object
+let Snake = {
+  x: 200,
+  y: 200,
+  xSpeed: 1,
+  ySpeed: 0,
+  size: 10
+};
+
+// Create the food object
+let food = {
+  x: Math.floor(Math.random() * 39) * 10,
+  y: Math.floor(Math.random() * 39) * 10
+}
+
+function update() {
+  // Move the Snake
+  Snake.x += Snake.xSpeed;
+  Snake.y += Snake.ySpeed;
+
+  // Check for collisions
+  if (Snake.x == food.x && Snake.y == food.y) {
+    // Generate a new food item
+    food = {
+      x: Math.floor(Math.random() * 39) * 10,
+      y: Math.floor(Math.random() * 39) * 10
+    }
+  }
+
+  // Check for game end conditions
+  // ...
+
+  // Draw the canvas
+  let canvas = document.querySelector('#canvas');
+  let context = canvas.getContext('2d');
+  context.clearRect(0, 0, 400, 400);
+  context.fillStyle = 'green';
+  context.fillRect(Snake.x, Snake.y, Snake.size, Snake.size);
+  context.fillStyle = 'red';
+  context.fillRect(food.x, food.y, Snake.size, Snake.size);
+}
+
+// Call the update function every 100
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>
