@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box{
+            border: 2px solid black;
+            height: 500px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        .box3{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        button{
+            width: 200px;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .copiar{
+            width: 150px;
+            background-color: rgb(0, 0, 114);
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box1 box" id="box1">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>PHP</button>
+            <button>React</button>
+            <button>MySQL</button>
+        </div>
+        <div class="box3"><button class="copiar">Copiar ></button>
+            <button id="voltar" class="copiar"> Voltar</button>
+        </div>
+     
+        <div class="box2 box" id="box2"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: normal 25px Arial;
+}
+:root{
+    --fundo: rgb(204, 204, 204);
+    --fundoCalc: rgb(46, 46, 46);
+    --cor1: rgb(121, 121, 121);
+    --cor2: green;
+    --cor3: black;
+    --cor4: rgb(22, 74, 151);
+    --cor2-light: rgb(75, 189, 75);
+    --cor3-light: rgb(95, 95, 95);
+    --cor4-light: rgb(94, 136, 199);
+    --corLetras: white;
+}
+
+body{
+    background-color: var(--fundo);
+}
+section.calculadora{
+    width: 300px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--fundoCalc);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--fundoCalc);
+
+    color: var(--corLetras);
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.575);
+}
+header{
+    display: flex;
+    height: calc(100%/4);
+    padding: 10px;
+}
+header input{
+    background-color: rgb(85, 102, 114);
+    font-size: 60px;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 100%;
+    padding:  10px;
+
+    color: white;
+}
+header input:focus{
+    outline: 0;
+}
+main{
+    display: grid;
+    gap: 6px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    padding: 0px 10px;
+}
+main section{
+    display: flex;
+    gap: 6px;
+
+}
+section.operadores-adicionais{
+    grid-column: 1/3;
+}
+section.operadores-aritmeticos{
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+div.op-adc{
+    border-radius: 15px;
+    width: calc(100%/4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: all .3s;
+
+}
+div.op-adc:hover{
+    background-color: var(--cor1);
+}
+.designer-botoes{
+    background-color: var(--cor4);
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s, border-radius .3s;
+}
+.designer-botoes:hover{
+    border-radius: 15px;
+}
+.numeros .designer-botoes:hover{
+    background-color: var(--cor3-light);
+}
+section.ferramentas div:nth-child(1){
+    background-color: var(--cor2);
+}
+section.ferramentas div:nth-child(1):hover{
+    background-color: var(--cor2-light);
+}
+section.ferramentas div:hover{
+    background-color: var(--cor4-light);
+}
+section.numeros{
+    flex-flow: row-reverse wrap;
+}
+section.numeros div{
+    background-color: var(--cor3);
+}
+.numeros div:hover{
+    background-color: var(--cor3-light);
+}
+.operadores-aritmeticos div:hover{
+    background-color: var(--cor4-light);
+}
+.numeros .bt-adc{
+    order: 9;
+}
+.botao{
+    user-select: none;
+}

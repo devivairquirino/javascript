@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            height: 100vh;
+        }
+        .caixa{
+            border: 2px solid rgb(63, 63, 63);
+            width: 280px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+
+        }
+        .curso{
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 8px;
+            width: 200px;
+            height:40px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+            user-select: none;
+            
+        }
+        button{
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            background-color: darkblue;
+            color: white;
+            width: 150px;
+
+        }
+        .selecionado{
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="caixa1" class="caixa" >
+            <div id="c1" class="curso c1  ">HTML</div>
+            <div id="c2" class="curso c1 ">CSS</div>
+            <div id="c3" class="curso c1 ">JavaScript</div>
+            <div id="c4" class="curso c1 ">PHP</div>
+            <div id="c5" class="curso c1 ">React</div>
+            <div id="c6" class="curso c1 ">MySQL</div>
+        </div>
+       
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

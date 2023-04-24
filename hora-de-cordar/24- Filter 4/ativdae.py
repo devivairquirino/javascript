@@ -1,0 +1,3 @@
+a= "jskdji"
+
+print(a)

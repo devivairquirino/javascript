@@ -1,0 +1,42 @@
+# Segunda-feira = 1
+# Terça-feira   = 2
+# Quarta-feira  = 3
+# Quinta-feira  = 4
+# Sexta-feira   = 5
+
+# Variavel usada para percorrer os dias da semana
+num_dia=1
+# Variavel que armazena o dia da semana a ser adicionado a qtd de votos
+dia_semana= "Segunda-feira"
+# variavel que armazena a maior quantidade de votos
+mais_votos=0
+# variavel que armazena o dia com a maior quantidade de votos
+dia_mais_votos="Segunda-feira"
+
+# for ira repetir 5 vezes, uma para cada dia
+for votos in range(5):
+    # ifs para determinar o dia da semana
+    if(num_dia==2):
+        dia_semana="Terça-feira"
+    if(num_dia==3):
+        dia_semana="Quarta-feira"
+    if(num_dia==4):
+        dia_semana="Quinta-feira"
+    if(num_dia==5):
+        dia_semana="Sexta-feira"
+
+    # variavel recebe a quantidade de votos do determina dia da semana
+    votos= int(input("Digite a quantidade de votos de {}: ".format(dia_semana)))
+
+    # print(votos)
+
+    if(votos > mais_votos):
+        mais_votos= votos
+        dia_mais_votos= dia_semana
+
+    # print(mais_votos,dia_mais_votos)
+
+
+    num_dia+=1
+
+print("O dia escolhido pela turma foi {} com {} votos!".format(dia_mais_votos,mais_votos))
