@@ -10,13 +10,13 @@
 body{
     font-family: "Great Vibes";
     font-size: 1.8em;
-    
+    text-shadow: 1px 1px 10px white;
 }
 section.personagem{
-    background: #b98722 url(img/fundo-retrato.jpg) no-repeat;
-    background-size: cover;
+    background: #b98722 url(img/fundo-retrato.png);
+    background-size: contain;
     background-position: center center;
-    height: 100vh;
+    
     padding-top: 10vh;
     box-sizing: border-box;
     text-align: center;
@@ -34,22 +34,33 @@ form h2{
 }
 .personagem  h1{
     background-color: rgba(255, 255, 255, 0);
-    text-shadow: 1px 1px 10px white;
+    
     margin-bottom: 15px;
     
 }
-.selecao{
-    
+.opcao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 input[type=radio]{
     appearance: none;
-    background-color: white;
-    height: 50px;
-    width: 50px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
+    background-size: contain;
     
 }
-input[type=radio]:checked{
-    background-color: red;
-    box-shadow: inset 0 0 0 5px white;
+
+#humano{
+    background-image: url(img/Ativo\ 1@130x-8.png );
+}
+#humano:checked{
+    box-shadow: 0 0 10px 5px #4c5f63,inset 0 0 10px 0px #4c5f63 ;
+}
+#elfo{
+    background-image: url(img/elfo.png);
+}
+#elfoNegro{
+    background-image: url(img/elfoNegro.png );
 }
