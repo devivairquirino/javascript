@@ -26,7 +26,7 @@ section.personagem{
 form{
     border: 3px solid black;
     
-    height: 400px;
+
     padding: 10px;
 }
 form h2{
@@ -37,4 +37,19 @@ form h2{
     text-shadow: 1px 1px 10px white;
     margin-bottom: 15px;
     
+}
+.selecao{
+    
+}
+input[type=radio]{
+    appearance: none;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+input[type=radio]:checked{
+    background-color: red;
+    box-shadow: inset 0 0 0 5px white;
 }
