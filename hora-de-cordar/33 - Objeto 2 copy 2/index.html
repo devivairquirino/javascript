@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inicial">
+        <div class="box">
+            <h2>Cadastro</h2>
+            <p>Por favor insira os dados do cliente.</p>
+            <div class="inputbox">
+                <input type="text" name="nome" id="nome" class="dados" required>
+                <label for="nome">Nome do Cliente</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="idade" id="idade" class="dados" required>
+                <label for="idade">Idade do Cliente</label>
+            </div>
+        
+            <button>ADICIONAR</button>
+        
+        </div>
+    </div>
+    <div id="ress">
+        <h1>Clientes Adicionados</h1>
+        <div class="clientes"> 
+            Nome: Ivair</br>
+            Idade: 27
+        </div>
+    </div>
+    <script>
+        const entrada = [...document.querySelectorAll("input")];
+        const lab = document.querySelectorAll("label")
+        
+        // entrada.map((el,i)=>{
+            
+        //     el.addEventListener("focus",()=>{
+        //         lab[i].classList.toggle("focus");
+        //     })
+        // })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

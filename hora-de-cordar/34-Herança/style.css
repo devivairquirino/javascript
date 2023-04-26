@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Great Vibes";
+    src: url(fonts/Great_Vibes/GreatVibes-Regular.ttf);
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Great Vibes";
+    font-size: 1.8em;
+    
+}
+section.personagem{
+    background: #b98722 url(img/fundo-retrato.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    padding-top: 10vh;
+    box-sizing: border-box;
+    text-align: center;
+    
+    
+}
+form{
+    border: 3px solid black;
+    
+    height: 400px;
+    padding: 10px;
+}
+form h2{
+    font-size: 1.3em;
+}
+.personagem  h1{
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px 10px white;
+    margin-bottom: 15px;
+    
+}

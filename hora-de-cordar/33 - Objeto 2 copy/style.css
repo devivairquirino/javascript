@@ -1,0 +1,130 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor1: #177E89;
+    --cor2: #084c61;
+    --cor3: #db3a34;
+    --cor4: #ffc857;
+    --cor5: #323031;
+}
+body{
+    background-color: var(--cor4);
+    font-family: monospace;
+}
+.inicial{
+    
+    height: 100vh;
+    
+    background-image: url(img/fundo320x455.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.box{
+    width: 90%;
+    height: 400px;
+    background-color: rgba(43, 43, 43, 0.74);
+    padding: 15px;
+    box-shadow: 3px 3px 3px rgba(56, 56, 56, 0.582);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        
+}
+.box h2{
+    margin: 10px 0px;
+    color: white;
+    font-size: 30px;
+}
+.box p{
+    font-size: 16px;
+    color: rgb(177, 177, 177);
+    margin-bottom: 30px;
+}
+.inputbox{
+    margin-bottom: 15px;
+    position: relative;
+
+
+}
+input{
+    background-color: var(--cor5);
+    height: 40px;
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+label{
+    position: absolute;
+   color: rgb(155, 155, 155);
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    
+}
+input:focus ~ label, input:valid ~ label{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--cor5) 50%);
+    top: -4px;
+    left: 5px;
+}
+
+button{
+    background-color:  transparent;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    color: white;
+    width: 130px;
+    height: 45px;
+    border: none;
+    border-radius: 40px;
+    transition: all 150ms ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 50px;
+    
+}
+  button:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
+#ress{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    top: 105vh;
+    
+}
+h1{
+    text-align: center;
+}
+.clientes{
+    background-color: rgb(255, 255, 255);
+    width: calc(100%/2 - 10px);
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.clientes:hover{
+    transform: scale(1.05);
+}
