@@ -146,7 +146,7 @@ input[type=radio]{
     gap: 50px;
 }
 .efeito{
-    padding: 13px;
+    padding: 15px;
     background-color: white;
     background-image: url(img/textura.jpg);
     background-size: contain;
@@ -172,9 +172,9 @@ input[type=radio]{
     width: 100%;
     text-align: left;
     padding: 0 5px;
-  border: 1px solid rgb(253, 143, 0);
-  box-shadow: 0 0 10px rgb(252, 214, 3);
-
+    border-radius: 2px;
+  box-shadow: -1px -1px 3px 0px rgba(255, 255, 255, 0.548),1px 1px 3px rgba(58, 58, 58, 0.664);
+    text-shadow: none;
 
 }
 .classes p{
