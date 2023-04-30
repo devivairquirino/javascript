@@ -31,13 +31,13 @@ form p{
 input[type=text]{
     padding:10px 5px 0 5px;
     background-color: transparent;
-  
     font: bold 1em "Great Vibes";
     height: 30px;
     text-transform: capitalize;
     width: 150px;
-   border: none;
-   border-radius: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+   
    color: rgb(196, 0, 0);
    text-shadow: 1px 1px 5px rgb(255, 255, 255);
    
@@ -47,6 +47,7 @@ input[type=text]{
 input[type=text]:focus{
     outline:none;
     box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.87);
+    border-radius: 20px;
 
     
 }
@@ -73,6 +74,7 @@ input[type=text]:focus{
 
 input[type=radio]{
     appearance: none;
+    
     height: 100px;
     width: 100px;
     background-size: contain;
