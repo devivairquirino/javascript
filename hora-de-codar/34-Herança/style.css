@@ -60,7 +60,7 @@ form{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; 
+    gap: 25px; 
 }
 h2{
     font-size: 1.2em;
