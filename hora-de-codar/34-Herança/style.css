@@ -15,56 +15,58 @@ body{
 section.personagem{
     background: #b98722 url(img/fundo-retrato.png) ;
     background-size: contain;
-    
-    padding-top: 5vh;
+    padding: 15px;
     box-sizing: border-box;
     text-align: center;
 }
-form{
-    border: 3px solid black;
-    padding: 10px;
+h1{
+    color: #eba210;
+    text-shadow: 1px 1px 2px black;
+    font-size: 2em;
+    margin-bottom: -25px;
 }
+
 form p{
     margin: 10px 0;
     font-weight: bold;
+    
 }
+
 input[type=text]{
-    padding:10px 5px 0 5px;
+    padding:10px 5px 0px 5px;
     background-color: transparent;
     font: bold 1em "Great Vibes";
     height: 30px;
     text-transform: capitalize;
     width: 150px;
     border: none;
-    border-bottom: 1px solid black;
-   
-   color: rgb(196, 0, 0);
-   text-shadow: 1px 1px 5px rgb(255, 255, 255);
-   
-
-    
+    border-bottom: 1px solid black;  
+    color: rgb(196, 0, 0);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 input[type=text]:focus{
     outline:none;
-    box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.87);
-    border-radius: 20px;
-
-    
 }
-.personagem  h1{
-    background-color: rgba(255, 255, 255, 0);
-    
-    margin-bottom: 15px;
-    
+form{
+
+    border: 5px double #000000;
+    padding-bottom: 20px;
 }
 .box{
-    min-height: 100vh;
+    border-bottom: 5px double #000000;
+    padding: 25px;
 }
 .boxRacas{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 15px; 
+}
+h2{
+    font-size: 1.2em;
+}
+.personagem h3{
+   margin-top: 20px;
 }
 .opcao{
     display: flex;
@@ -74,7 +76,6 @@ input[type=text]:focus{
 
 input[type=radio]{
     appearance: none;
-    
     height: 100px;
     width: 100px;
     background-size: contain;
@@ -85,6 +86,9 @@ input[type=radio]{
 .racas input[type=radio]{
     border-radius: 50%;
 }
+label{
+    user-select: none;
+}   
 .racas label{
     border-radius: 40px;
     padding: 4px;
@@ -144,50 +148,203 @@ input[type=radio]{
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+
 }
-.efeito{
-    padding: 15px;
+.card{
+    padding: 10px;
     background-color: white;
     background-image: url(img/textura.jpg);
     background-size: contain;
+    cursor: pointer;
 }
-.classes{
+.cardSelecionado{
+    box-shadow: 0px 0px 20px 10px #18a49d;
+}
+.cardSelecionado > div{
+    background-image: url(img/fundocardazul.png);
+    box-shadow: 0px 0px 15px 5px #085753;
+}
+.cardClasses{
+    
     width: 200px;
-    height: 300px;
+    height: 310px;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding:10px;
+    padding: 8px 20px;
+    
     background-image: url(img/fundocard.png);
     background-size: cover;
-    box-shadow: 2px 2px 3px  2px rgba(7, 7, 7, 0.445);
-    /* border: 12px solid black;
-    border-image: url(img/textura.jpg) 40 40 40 40 repeat; */
+    box-shadow: 0px 0px 15px 5px #085753;
+    box-shadow: 0px 0px 15px 5px rgb(7, 7, 7);
+
 }
-.classes label{
-   
+
+.cardClasses label{
+   border: 1px solid rgba(58, 58, 58, 0.664);
+   border-left-color: rgba(255, 255, 255, 0.548);
+   border-top-color: rgba(255, 255, 255, 0.548);
     font-size: 18px;
     width: 100%;
     text-align: left;
-    padding: 0 5px;
-    border-radius: 2px;
-  box-shadow: -1px -1px 3px 0px rgba(255, 255, 255, 0.548),1px 1px 3px rgba(58, 58, 58, 0.664);
+    padding: 0 8px;
+    border-radius: 3px;
+    box-shadow: -1px -1px 2px 0px rgba(255, 255, 255, 0.548),1px 1px 2px rgba(58, 58, 58, 0.664);
     text-shadow: none;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+.cardClasses p{
+    margin: 0;
+    font-size: 10px;
+    text-align: left;
+    border: 5px double #b15030;
+    background-color: #d1d1d180;
+    height: 55px;
+    width: 100%;
+    font-weight: normal;
+}
+.cardClasses input[type=radio]{
+    background-size: cover;
+    width: calc(100% - 10px);
+    height: 200px;
+    border: 5px outset rgb(185, 185, 185);
+    background-color: white;
 
 }
-.classes p{
-    font-size: 10px;
-    border: 1px solid black;
-}
-.classes input[type=radio]{
-    background-size: cover;
-    width: calc(100% - 20px);
-    height: 140px;
-}
+
 #mago{
     background-image: url(img/mage.png);
     
-    border: 1px solid black;
+}
+#guerreiro{
+    background-image: url(img/warrior.png);
+}
+#arqueiro{
+    background-image: url(img/archer.png);
+}
+.boxElementos{
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.elemento{
+    background-color: blue;
+    border-radius: 50%;
+    
+    z-index: 2;
+}
+.boxElementos input[type=radio]{
+    width: 65px;
+    height: 65px;
+}
+
+.circle{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    animation: girar 60s linear infinite;
+    
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.circle .elemento{
+    position: absolute;
+    background-size: cover;
+}
+
+.circle .elemento:nth-child(1){
+    top: 0;
+    left: 50%;
+    
+    transform: translateX(-50%);
+    background-image: url(img/terra.png);
+}
+.circle .elemento:nth-child(1):checked{
+    box-shadow: 0 0 10px 5px #0FA829, 0 0 40px #0FA829, 0 0 80px #0FA829;
+
+}
+.circle .elemento:nth-child(2){
+    top: 30%;
+    right: 5.5%;
+    
+    transform: translateY(-50%);
+    background-image: url(img/agua.png);
+}
+.circle .elemento:nth-child(2):checked{
+    box-shadow: 0 0 10px 5px #0792CE, 0 0 40px #0792CE, 0 0 80px #0792CE;
+
+}
+.circle .elemento:nth-child(3){
+    top: 70%;
+    right: 5.5%;
+    
+    transform: translateY(-50%);
+    background-image: url(img/luz.png);
+}
+.circle .elemento:nth-child(3):checked{
+    box-shadow: 0 0 10px 5px #FEF100, 0 0 40px #FEF100, 0 0 80px #FEF100;
+
+}
+
+.circle .elemento:nth-child(4){
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(img/fogo.png);
+}
+.circle .elemento:nth-child(4):checked{
+    box-shadow: 0 0 10px 5px #D64A2D, 0 0 40px #D64A2D, 0 0 80px #D64A2D;
+
+}
+.circle .elemento:nth-child(5){
+    top: 30%;
+    left: 5.5%;
+    
+    transform: translateY(-50%);
+    background-image: url(img/trevas.png);
+}
+.circle .elemento:nth-child(5):checked{
+    box-shadow: 0 0 10px 5px #504B72, 0 0 40px #504B72, 0 0 80px #504B72;
+
+}
+.circle .elemento:nth-child(6){
+    top: 70%;
+    left: 5.5%;
+    
+    transform: translateY(-50%);
+    background-image: url(img/ar.png);
+}
+.circle .elemento:nth-child(6):checked{
+    box-shadow: 0 0 10px 5px #965EB8, 0 0 40px #965EB8, 0 0 80px #965EB8;
+
+}
+button{
+    border: none;
+    background-color: transparent;
+    width: 230px;
+    height: 66px;
+    background-image: url(img/button.png);
+    background-size: contain;
+    color: #eba210;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+    font-size: 25px;
+    margin-bottom: -25px;
+    font-family: serif;
+    font-weight: bold;
 }

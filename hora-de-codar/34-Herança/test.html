@@ -9,7 +9,7 @@
         body{
             display: flex;
             justify-content: center;
-            background-color: lightblue;
+            background-color: lightblue4;
             
         }
         div.relevo{
@@ -20,11 +20,79 @@
             box-shadow: 0px 0px 1px 0px black,0px 0px 1px 0px black inset;
 
         }
+        .hexagon {
+  width: 100px;
+  height: 55px;
+  background-color: #99ccff;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+
+.circle-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.circle:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle:nth-child(2) {
+  top: 25%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+.circle:nth-child(3) {
+  top: 75%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+.circle:nth-child(4) {
+  top: 75%;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.circle:nth-child(5) {
+  top: 25%;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
     </style>
 </head>
 <body>
     <div class="relevo">
 
     </div>
+    <div class="hexagon"></div>
+
+    <div class="circle-box">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      
 </body>
 </html>
