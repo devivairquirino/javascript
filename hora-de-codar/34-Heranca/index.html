@@ -18,9 +18,9 @@
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" >
                 </section>
-                <h3>Escolha sua Raça:</h3>
-            <section class="boxRacas box">
                 
+            <section class="boxRacas box">
+                <h3>Escolha sua Raça:</h3>
                     <div class="racas opcao">
                         <input type="radio" name="raça" id="humano">
                         <label for="humano">Humano</label>
@@ -40,32 +40,41 @@
                     <label for="minotauro">Minotauro</label>
                 </div>
             </section>
-           <h3 id="escolhaClasse">Escolha sua Classse:</h3>
             <section class="boxClasses box">
+                <h3 id="escolhaClasse">Escolha sua Classse:</h3>
                 <div class="card">
                     <div class="cardClasses opcao ">
                         <label for="mago">MAGO</label>
                         <input type="radio" name="classe" class="classe" id="mago">
                     
-                        <p><strong>[ Mago/Feiticeiro ]</strong><br>O mago é a classe mais misteriosa de todas. Eles são capazes de manipular o poder da natureza e os elementos para criar feitiços incríveis.</p>
+                        <div class="infoCard">
+                            <h4>[ Mago/Feiticeiro ]</h4>
+                            <p>O mago é a classe mais misteriosa de todas. Eles são capazes de manipular o poder da natureza e os elementos para criar feitiços incríveis.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="cardClasses opcao">
                         <label for="guerreiro">GUERREIRO</label>
                         <input type="radio" class="classe" name="classe" id="guerreiro">
-                            <p><strong>[ Guerreiro ]</strong><br>Os guerreiros são a classe são conhecidos por sua força bruta e habilidade com armas, mas também possuem uma grande variedade de magias para usar em combate.</p>
+                            <div class="infoCard">
+                                <h4>[ Guerreiro ]</h4>
+                                <p>Os guerreiros são a classe são conhecidos por sua força bruta e habilidade com armas, mas também possuem uma grande variedade de magias para usar em combate.</p>
+                            </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="cardClasses opcao">
                         <label for="arqueiro">ARQUEIRO</label>
                         <input type="radio" class="classe" name="classe" id="arqueiro">
-                        <p><strong>[ Arqueiro ]</strong><br>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
+                        <div class="infoCard">
+                            <h4>[ Arqueiro ]</h4>
+                            <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <p>Escolha um Elemento:</p>
+           <h3>Escolha um Elemento:</h3>
             <section class="boxElementos box">
                 <div class="circle">
                     <input type="radio" name="elemento" class="elemento" id="agua">
@@ -85,33 +94,22 @@
             <div class="personCriados">
                 <h2>Personagens Criados!</h2>
                 <div class="boxNovos">
-                    <div class="card">
-                        <div class="cardClasses opcao">
-                            <label for="arqueiro">ARQUEIRO</label>
-                            <input type="radio" class="classe" name="classe" id="arqueiro">
-                            <p><strong>[ Arqueiro ]</strong><br>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
-                        </div>
-                    </div>
                     <div class="card cardPequeno">
                         <div class="cardClasses opcao">
                             <label for="arqueiro">ARQUEIRO</label>
                             <input type="radio" class="classe" name="classe" id="arqueiro">
-                            <p><strong>[ Arqueiro ]</strong><br>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
+                            <div class="infoCard">
+                                <h4>[ Arqueiro ]</h4>
+                                <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card cardPequeno">
-                        <div class="cardClasses opcao">
-                            <label for="arqueiro">ARQUEIRO</label>
-                            <input type="radio" class="classe" name="classe" id="arqueiro">
-                            <p><strong>[ Arqueiro ]</strong><br>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    
         </section>
     </main>
-    <script src="script.js">
+    <script type="module" src="script.js">
     </script>
-    <script src="ajusteInput.js"></script>
+    <script  src="ajusteInput.js"></script>
+    <script type="module" src="interacoesHTML.js"></script>
 </body>
 </html>

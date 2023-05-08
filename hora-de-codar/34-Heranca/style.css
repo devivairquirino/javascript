@@ -25,10 +25,6 @@ h1{
     font-size: 2em;
     margin-bottom: -25px;
 }
-form p{
-    margin: 10px 0;
-    font-weight: bold;
-}
 input[type=text]{
     padding:10px 5px 0px 5px;
     background-color: transparent;
@@ -62,7 +58,7 @@ h2{
     font-size: 1.2em;
 }
 .personagem h3{
-   margin-top: 20px;
+   width: 100%;
 }
 .opcao{
     display: flex;
@@ -183,7 +179,7 @@ label{
     margin-bottom: 7px;
     cursor: pointer;
 }
-.cardClasses p{
+.cardClasses .infoCard{
     margin: 0;
     font-size: 10px;
     text-align: left;
@@ -375,22 +371,42 @@ button:hover{
     gap: 10px;
     position: relative;
     height: 400px;
+    padding: 10px;
+
 }
 .boxNovos .card{
-    
     flex-shrink: 0;
 }
 .cardPequeno{
-    width: calc((100%/2) - 25px);
-    height: 240px;
-
-  
+    width: 180px;
+    height: 250px;
 }
-.boxNovos .card:nth-child(1){
+.cardDestaque{
     position: fixed;
     z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 0px 0px 10px 100vh rgba(0, 0, 0, 0.342);
+}
+.boxNovos .card label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxNovos .card label img{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+}
+p{
+    padding: 0 3px;
+}
+ span{
+    display: block;
+    border-top: 1px solid black;
+    font-weight: bold;
+    font-size: 9px;
+    text-align: right;
 }

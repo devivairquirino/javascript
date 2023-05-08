@@ -1,5 +1,7 @@
+import { criarDiv } from "./interacoesHTML.js";
+
 class Personagem{
-    constructor(nome,raça, classe, elemento){
+    constructor(nome,raça,classe, elemento){
         this.nome=nome;
         this.raça=raça;
         this.classe=classe;
@@ -42,20 +44,22 @@ class Elfo extends Personagem{
 }
 class ElfoNegro extends Elfo{
     constructor(nome,classe){
-        const elemento= "Darkness";
+        const elemento= "Trevas";
         super(nome,classe,elemento);
     }
 }
 
-const Player1= new Personagem();
-Player1.setNome("Vhouross");
-Player1.setRaça("Humano");
-Player1.setClasse("Mago");
-Player1.setElemento("Darkness");
-Player1.info();
+// const Player1= new Personagem();
+// Player1.setNome("Vhouross");
+// Player1.setRaça("Humano");
+// Player1.setClasse("Mago");
+// Player1.setElemento("Trevas");
+// Player1.info();
 
-const Player2= new Elfo("Zendrics","Arqueiro","Fogo");
+// const Player2= new Elfo("Zendrics","Arqueiro","Fogo");
 
-Player2.info();
-const Player3= new ElfoNegro("Petrus","Mago");
-Player3.info();
+// Player2.info();
+// const Player3= new ElfoNegro("Petrus","Mago");
+// Player3.info();
+
+console.log(criarDiv());
