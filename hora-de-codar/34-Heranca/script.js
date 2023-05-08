@@ -1,5 +1,6 @@
-import { criarDiv } from "./interacoesHTML.js";
-
+import { criarCard } from "./interacoesHTML.js";
+const boxNovos= document.querySelector(".boxNovos");
+const btCriar= document.querySelector("button");
 class Personagem{
     constructor(nome,raça,classe, elemento){
         this.nome=nome;
@@ -62,4 +63,18 @@ class ElfoNegro extends Elfo{
 // const Player3= new ElfoNegro("Petrus","Mago");
 // Player3.info();
 
-console.log(criarDiv());
+const inputName= document.querySelector("#nome");
+btCriar.addEventListener("click",()=>{
+    const newCards= [...document.querySelectorAll(".cardPequeno")];
+    const namePerson= inputName.value;
+    const elemento= document.querySelector(".elemento");
+    console.log(elemento.style.backgroundImage.value)
+    
+    if(namePerson==""){
+        const card= criarCard(namePerson);
+        boxNovos.insertBefore(card,newCards[0]);
+    }
+    else{
+        alert("Por favor defina um nome para seu personagem!");
+    }
+})

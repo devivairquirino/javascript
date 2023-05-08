@@ -12,7 +12,7 @@
     <main>
         <section class="personagem">
             <h1>Wolrd Magic</h1>
-            <form action="#new">
+            <section class="form">
                 <section class="boxNome box">
                     <h2>Crie seu Personagem!</h2>
                     <label for="nome">Nome:</label>
@@ -21,31 +21,31 @@
                 
             <section class="boxRacas box">
                 <h3>Escolha sua Raça:</h3>
-                    <div class="racas opcao">
-                        <input type="radio" name="raça" id="humano">
+                    <div class="racas">
+                        <input type="radio" name="raça" id="humano" checked>
                         <label for="humano">Humano</label>
                     </div>
                 
-                <div class="racas opcao">
+                <div class="racas">
                     <input type="radio" name="raça" id="elfo">
                     <label for="elfo">Elfo</label>
                 </div>
                 
-                <div class="racas opcao">
+                <div class="racas">
                     <input type="radio" name="raça" id="elfoNegro">
                     <label for="elfoNegro">Elfo Negro</label>
                 </div>
-                <div class="racas opcao">
+                <div class="racas">
                     <input type="radio" name="raça" id="minotauro">
                     <label for="minotauro">Minotauro</label>
                 </div>
             </section>
             <section class="boxClasses box">
                 <h3 id="escolhaClasse">Escolha sua Classse:</h3>
-                <div class="card">
-                    <div class="cardClasses opcao ">
-                        <label for="mago">MAGO</label>
-                        <input type="radio" name="classe" class="classe" id="mago">
+                <div class="card cardSelecionado">
+                    <div class="cardClasses ">
+                        <div class="headerCard">MAGO</div>
+                        <input type="radio" name="classe" class="classe" id="mago" checked>
                     
                         <div class="infoCard">
                             <h4>[ Mago/Feiticeiro ]</h4>
@@ -54,8 +54,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="cardClasses opcao">
-                        <label for="guerreiro">GUERREIRO</label>
+                    <div class="cardClasses">
+                        <div class="headerCard">GUERREIRO</div>
                         <input type="radio" class="classe" name="classe" id="guerreiro">
                             <div class="infoCard">
                                 <h4>[ Guerreiro ]</h4>
@@ -64,8 +64,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="cardClasses opcao">
-                        <label for="arqueiro">ARQUEIRO</label>
+                    <div class="cardClasses">
+                        <div class="headerCard">ARQUEIRO</div>
                         <input type="radio" class="classe" name="classe" id="arqueiro">
                         <div class="infoCard">
                             <h4>[ Arqueiro ]</h4>
@@ -77,7 +77,7 @@
            <h3>Escolha um Elemento:</h3>
             <section class="boxElementos box">
                 <div class="circle">
-                    <input type="radio" name="elemento" class="elemento" id="agua">
+                    <input type="radio" name="elemento" class="elemento" id="agua" checked>
                     <input type="radio" name="elemento" class="elemento" id="terra">
                     <input type="radio" name="elemento" class="elemento" id="fogo">
                     <input type="radio" name="elemento" class="elemento" id="ar">
@@ -86,24 +86,14 @@
                 </div>
                 <div class="hexagon"></div>
             </section>
-            <button type="submit">Criar</button>
-            </form>
+            <button>Criar</button>
+        </section>
         </section>
         <section class="novosPerson" id="new">
             
             <div class="personCriados">
                 <h2>Personagens Criados!</h2>
-                <div class="boxNovos">
-                    <div class="card cardPequeno">
-                        <div class="cardClasses opcao">
-                            <label for="arqueiro">ARQUEIRO</label>
-                            <input type="radio" class="classe" name="classe" id="arqueiro">
-                            <div class="infoCard">
-                                <h4>[ Arqueiro ]</h4>
-                                <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="boxNovos"></div>
                     
         </section>
     </main>
