@@ -22,21 +22,21 @@
             <section class="boxRacas box">
                 <h3>Escolha sua Raça:</h3>
                     <div class="racas">
-                        <input type="radio" name="raça" id="humano" checked>
+                        <input type="radio" name="raca" class="raca" id="humano" checked>
                         <label for="humano">Humano</label>
                     </div>
                 
                 <div class="racas">
-                    <input type="radio" name="raça" id="elfo">
+                    <input type="radio" name="raca" class="raca" id="elfo">
                     <label for="elfo">Elfo</label>
                 </div>
                 
                 <div class="racas">
-                    <input type="radio" name="raça" id="elfoNegro">
+                    <input type="radio" name="raca" class="raca" id="elfoNegro">
                     <label for="elfoNegro">Elfo Negro</label>
                 </div>
                 <div class="racas">
-                    <input type="radio" name="raça" id="minotauro">
+                    <input type="radio" name="raca" class="raca" id="minotauro">
                     <label for="minotauro">Minotauro</label>
                 </div>
             </section>
@@ -49,7 +49,7 @@
                     
                         <div class="infoCard">
                             <h4>[ Mago/Feiticeiro ]</h4>
-                            <p>O mago é a classe mais misteriosa de todas. Eles são capazes de manipular o poder da natureza e os elementos para criar feitiços incríveis.</p>
+                            <p>Os magos são capazes de manipular o poder da natureza e os elementos para criar feitiços.</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         <input type="radio" class="classe" name="classe" id="guerreiro">
                             <div class="infoCard">
                                 <h4>[ Guerreiro ]</h4>
-                                <p>Os guerreiros são a classe são conhecidos por sua força bruta e habilidade com armas, mas também possuem uma grande variedade de magias para usar em combate.</p>
+                                <p>Os guerreiros são a classe conhecida por sua força bruta e habilidade com armas.</p>
                             </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <input type="radio" class="classe" name="classe" id="arqueiro">
                         <div class="infoCard">
                             <h4>[ Arqueiro ]</h4>
-                            <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar seus inimigos, eles têm um domínio incomparável com arco.</p>
+                            <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar inimigos, eles têm domínio com arco.</p>
                         </div>
                     </div>
                 </div>
@@ -77,12 +77,12 @@
            <h3>Escolha um Elemento:</h3>
             <section class="boxElementos box">
                 <div class="circle">
-                    <input type="radio" name="elemento" class="elemento" id="agua" checked>
-                    <input type="radio" name="elemento" class="elemento" id="terra">
-                    <input type="radio" name="elemento" class="elemento" id="fogo">
-                    <input type="radio" name="elemento" class="elemento" id="ar">
-                    <input type="radio" name="elemento" class="elemento" id="trevas">
+                    <input type="radio" name="elemento" class="elemento" id="terra" checked>
+                    <input type="radio" name="elemento" class="elemento" id="agua" >
                     <input type="radio" name="elemento" class="elemento" id="luz">
+                    <input type="radio" name="elemento" class="elemento" id="fogo">
+                    <input type="radio" name="elemento" class="elemento" id="trevas">
+                    <input type="radio" name="elemento" class="elemento" id="ar">
                 </div>
                 <div class="hexagon"></div>
             </section>
@@ -99,6 +99,7 @@
     </main>
     <script type="module" src="script.js">
     </script>
+    <script src="test.js"></script>
     <script  src="ajusteInput.js"></script>
     <script type="module" src="interacoesHTML.js"></script>
 </body>

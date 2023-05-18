@@ -186,8 +186,7 @@ label{
     text-align: left;
     border: 5px double #b15030;
     background-color: #d1d1d180;
-    height: 100%;
-    width: 100%;
+    height: 60px;
     font-weight: normal;
 }
 .cardClasses input[type=radio]{
@@ -222,16 +221,6 @@ label{
     align-items: center;
     flex-direction: column;
 }
-.elemento{
-    background-color: blue;
-    border-radius: 50%;
-    
-    z-index: 2;
-}
-.boxElementos input[type=radio]{
-    width: 65px;
-    height: 65px;
-}
 
 .circle{
     border-radius: 50%;
@@ -250,78 +239,89 @@ label{
         transform: rotate(360deg);
     }
 }
+.elemento{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+}
 
 
 .circle .elemento{
     position: absolute;
-    background-size: cover;
-}
 
+}
+/* .circle .elmento:checked{
+    filter: saturate(0);
+} */
 .circle .elemento:nth-child(1){
     top: 0;
-    left: 50%;
-    
+    left: 50%;   
     transform: translateX(-50%);
+}
+#terra{
     background-image: url(img/terra.png);
 }
 .circle .elemento:nth-child(1):checked{
     box-shadow: 0 0 10px 5px #0FA829, 0 0 40px #0FA829, 0 0 80px #0FA829;
-
 }
 .circle .elemento:nth-child(2){
     top: 30%;
     right: 5.5%;
-    
     transform: translateY(-50%);
+}
+#agua{
     background-image: url(img/agua.png);
 }
 .circle .elemento:nth-child(2):checked{
     box-shadow: 0 0 10px 5px #0792CE, 0 0 40px #0792CE, 0 0 80px #0792CE;
-
 }
 .circle .elemento:nth-child(3){
     top: 70%;
-    right: 5.5%;
-    
+    right: 5.5%;  
     transform: translateY(-50%);
+}
+#luz{
     background-image: url(img/luz.png);
+    
 }
 .circle .elemento:nth-child(3):checked{
     box-shadow: 0 0 10px 5px #FEF100, 0 0 40px #FEF100, 0 0 80px #FEF100;
-
 }
 
 .circle .elemento:nth-child(4){
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+#fogo{
     background-image: url(img/fogo.png);
 }
 .circle .elemento:nth-child(4):checked{
     box-shadow: 0 0 10px 5px #D64A2D, 0 0 40px #D64A2D, 0 0 80px #D64A2D;
-
 }
 .circle .elemento:nth-child(5){
     top: 30%;
-    left: 5.5%;
-    
+    left: 5.5%;    
     transform: translateY(-50%);
+}
+#trevas{
     background-image: url(img/trevas.png);
+    
 }
 .circle .elemento:nth-child(5):checked{
     box-shadow: 0 0 10px 5px #504B72, 0 0 40px #504B72, 0 0 80px #504B72;
-
 }
 .circle .elemento:nth-child(6){
     top: 70%;
-    left: 5.5%;
-    
+    left: 5.5%;  
     transform: translateY(-50%);
+}
+#ar{
     background-image: url(img/ar.png);
 }
 .circle .elemento:nth-child(6):checked{
     box-shadow: 0 0 10px 5px #965EB8, 0 0 40px #965EB8, 0 0 80px #965EB8;
-
 }
 button{
     border: none;
@@ -340,25 +340,19 @@ button{
     margin-top: 50px;   
     cursor: pointer; 
     border-radius: 50px;
-    
-    
 }
 button:hover{
     transform: scale(1.03);
     font-size: 28px;
     box-shadow: 0px -0px 15px #f1a307 inset;
-
 }
 .novosPerson{
     background-color: rgb(255, 151, 16);
     background-image: url(img/fundo-paisagem.png);
     background-size: cover;
- 
-    
 }
 .personCriados{
     border: 5px double black;
-    height: 400px;
 }
 .personCriados h2{
     text-align: center;
@@ -368,12 +362,11 @@ button:hover{
 }
 .boxNovos{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 10px;
     position: relative;
-    height: 400px;
-    padding: 10px;
 
+    padding: 10px;
 }
 .boxNovos .card{
     flex-shrink: 0;
@@ -384,7 +377,6 @@ button:hover{
 }
 .cardDestaque{
     position: fixed;
-    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -395,9 +387,19 @@ button:hover{
     justify-content: space-between;
     align-items: center;
 }
-.boxNovos .card .headerCard img{
+.boxNovos .card .headerCard .elemento{
     border: 1px solid white;
-    border-radius: 50%;
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
+    margin: 1px 0;
+}
+
+.boxNovos .cardPequeno .infoCard{
+    padding: 0 3px;
+    font-size: 8px;
+}
+.boxNovos .infoCard strong{
+    border-top: 1px solid black;
+    display: block;
+    text-align: right;
 }
