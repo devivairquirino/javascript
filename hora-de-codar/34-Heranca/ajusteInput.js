@@ -32,7 +32,7 @@ racas.map((raca,index)=>{
         }
         else{
             elementos.map((el,i)=>{
-                el.disabled="true";
+                el.removeAttribute("disabled");
                 el.style.filter="saturate(100%)";
                
             })
