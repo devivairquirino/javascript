@@ -40,7 +40,7 @@ section.ress{
     gap: 10px;
     flex-wrap: wrap;
 }
-section.ress div{
+section.ress .carro{
     border: 3px solid blue;
     background-color: rgb(89, 161, 255);
     border-radius: 5px;
@@ -51,6 +51,5 @@ span{
     font-weight: bold;
 }
 .selecionado{
-    border: 3px solid red !important;
-    background-color: lightcoral !important;
+    border: 3px solid red;
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static</title>
+</head>
+<body>
+    <script>
+        class Npc{
+            static npcs=[];
+            
+            constructor(energia){
+                this.alert=false;
+                this.energia=energia;
+                Npc.npcs.push(this)
+            }
+            info= function(){
+                console.log(`Energia: ${this.energia}`);
+                console.log(`Alerta: ${(this.alert?"sim":"nao")}`)
+                console.log("--------------")
+            }
+            morte(){
+                this.energia=0
+            }
+            static alertarTodos= function(npcs){
+                Npc.npcs.forEach(npc=>{
+                    npc.alert=true;
+                })
+            }
+            static restaurarTodos= function(){
+                Npc.npcs.forEach(npc=>{
+                    npc.energia=100;
+                })
+            }
+        }
+        
+        
+        const npc1= new Npc(100);
+        const npc2= new Npc(70);
+        const npc3= new Npc(40);
+        console.log(Npc.npcs)
+
+        Npc.alertarTodos();
+        npc1.morte();
+        npc2.morte();
+        npc1.info();
+        npc2.info();
+        npc3.info();
+
+        console.log(">>>>>>>>>>>>>>>Revivendo NPCs...<<<<<<<<<<<<<<")
+        Npc.restaurarTodos();
+        npc1.info();
+        npc2.info();
+        npc3.info();
+ 
+        
+        
+    </script>
+</body>
+</html>

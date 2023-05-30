@@ -1,3 +1,7 @@
+const boxCarros= document.querySelector(".ress");
+const botao= document.querySelector("#add");
+const botaoRemover= document.querySelector("#remove")
+
 class Carro{ //Classe PAI
     constructor(nome,portas){
         this.nome=nome;
@@ -60,38 +64,70 @@ radios.map(el=>{
     })
 });
 
-const botao= document.querySelector("button");
+
 let carros=[];
 botao.addEventListener("click",()=>{
     const iNome= document.querySelector("#nome");
     const iPortas= document.querySelector("#portas");
     const iBlind= document.querySelector("#blindagem");
     const iMuni= document.querySelector("#municao");
-    const boxCarros= document.querySelector(".ress");
+    
     // const tipoSel= document.querySelector("[name=tipo]:checked");
 
     if(iNome.value!==""){
-        const carNovo= radios[0].checked ? new Militar(iNome.value, iPortas.value,iBlind.value,iMuni.value): new Carro(iNome.value, iPortas.value);
+        if(radios[0].checked){
+            const c=new Militar(iNome.value, iPortas.value,iBlind.value,iMuni.value)
+            carros.push(c);
+        }else{
+            const c= new Carro(iNome.value, iPortas.value);
+            carros.push(c)
+        } 
 
-        boxCarros.appendChild(criarDiv(carNovo.nome));
-
-
-        carros.push(carNovo); 
-        console.log(carros);
+        criarDiv();
     }
     else{
         alert("Insira o nome do veículo!")
     }
 })
 
-function criarDiv(nome,portas,cor,blindagem,municao){
-    const card= document.createElement("div");
-    card.innerHTML=`
-    <span>Nome:</span> ${nome} <br> 
-    <span>Portas:</span> ${portas} <br> 
-    <span>Cor:</span> ${cor} <br> 
-    <span>Blindagem:</span> ${blindagem} <br> 
-    <span>Munição:</span> ${municao}`
-
-    return card;
+function criarDiv(){
+    boxCarros.innerHTML=""
+    carros.forEach(c=>{
+        const card= document.createElement("div");
+        card.innerHTML=`
+        <span>Nome:</span> ${c.nome} <br> 
+        <span>Portas:</span> ${c.portas} <br> 
+        <span>Cor:</span> ${c.cor==undefined?"sem cor":c.cor} <br> 
+        <span>Blindagem:</span> ${c.blindagem==undefined?0:c.blindagem} <br> 
+        <span>Munição:</span> ${c.municao==undefined?0:c.municao}`
+        card.addEventListener("click",evt=>{
+            // limparSel();
+            card.classList.toggle("selecionado");
+        })
+        boxCarros.appendChild(card);
+    })
 }
+
+botaoRemover.addEventListener("click",evt=>{
+    const a_divCarro=[...boxCarros.children];
+    let count=0;
+    a_divCarro.forEach((c,i)=>{
+        
+        if(c.classList.contains("selecionado")){
+            
+            carros.splice(i-count,1);
+            count++;
+        }
+        criarDiv();
+    })
+    
+
+})
+
+function limparSel(){
+    const selecionado= document.querySelector(".selecionado");
+    if(selecionado!=undefined){
+        selecionado.classList.remove("selecionado");
+    }
+}
+
