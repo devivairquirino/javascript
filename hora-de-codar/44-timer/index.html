@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: monospace;
+            font-size: 18px;
+        }
+        .box_alarme{
+            width: 300px;
+            height: 200px;
+
+            background-color: rgb(219, 219, 219);
+            border: 2px solid #808080;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+        .data{
+            align-self: center;
+        }
+        .horas{
+            background-color: rgb(44, 44, 44);
+            color: green;
+            font-size: 1.4em;
+            align-self: center;
+            border-radius: 5px;
+            width: 180px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #tempo{
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-family: monospace;
+        }
+        .botoes{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        button{
+            background-color: rgb(160, 160, 160);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <section class="box_alarme">
+        <div class="data"></div>
+        <div class="horas"></div>
+        <p>Hora do Alarme</p>
+        <p>Tempo do alarme (segundo)</p>
+        <input type="number" id="tempo" class="tempo" value="0">
+        <div class="botoes">
+            <button id="ativar">Ativar</button>
+            <button id="parar">Parar</button>
+        </div>
+   </section>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

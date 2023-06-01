@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body{
+            font-family: monospace;
+            background-color: rgb(250, 250, 171);
+        }
+        h1{
+            text-align: center;
+            
+            font-size: 4.5em;
+        }
+        .boxPai{
             display: flex;
+            justify-content: center;
             background-color: lightblue;
             font-family: monospace;
             font-size: 4em;
@@ -24,9 +38,12 @@
     </style>
 </head>
 <body>
-    <div class="box hora"></div>:
-    <div class="box min"></div>:
-    <div class="box seg"></div>
+    <h1>Relógio</h1>
+    <div class="boxPai">
+        <div class="box hora">00</div>:
+        <div class="box min">00</div>:
+        <div class="box seg">00</div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
