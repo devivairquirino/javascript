@@ -63,14 +63,25 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .alarme{
+            animation: alarme 1s ease infinite;
+        }
+        @keyframes alarme {
+            0%{
+                background-color: #808080;
+            }
+            100%{
+                background-color: red;
+            }
+        }
     </style>
 </head>
 <body>
    <section class="box_alarme">
         <div class="data"></div>
         <div class="horas"></div>
-        <p>Hora do Alarme</p>
-        <p>Tempo do alarme (segundo)</p>
+        <label id="hora_alarme">Hora do Alarme:</label>
+        <label>Tempo do alarme (segundo)</label>
         <input type="number" id="tempo" class="tempo" value="0">
         <div class="botoes">
             <button id="ativar">Ativar</button>
