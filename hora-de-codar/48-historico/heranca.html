@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
+    <title>Wolrd Magic</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body >
+    <main>
+        <section class="personagem">
+            <h1>Wolrd Magic</h1>
+            <section class="form">
+                <section class="boxNome box">
+                    <h2>Crie seu Personagem!</h2>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" >
+                </section>    
+            <section class="boxRacas box">
+                <h3>Escolha sua Raça:</h3>
+                    <div class="racas">
+                        <input type="radio" name="raca" class="raca" id="humano" checked>
+                        <label for="humano">Humano</label>
+                    </div>
+                
+                <div class="racas">
+                    <input type="radio" name="raca" class="raca" id="elfo">
+                    <label for="elfo">Elfo</label>
+                </div>
+                
+                <div class="racas">
+                    <input type="radio" name="raca" class="raca" id="elfoNegro">
+                    <label for="elfoNegro">Elfo Negro</label>
+                </div>
+                <div class="racas">
+                    <input type="radio" name="raca" class="raca" id="minotauro">
+                    <label for="minotauro">Minotauro</label>
+                </div>
+            </section>
+            <section class="boxClasses box">
+                <h3 id="escolhaClasse">Escolha sua Classse:</h3>
+                <div class="card cardSelecionado">
+                    <div class="cardClasses ">
+                        <div class="headerCard">MAGO</div>
+                        <input type="radio" name="classe" class="classe" id="mago" checked>
+                    
+                        <div class="infoCard">
+                            <h4>[ Mago/Feiticeiro ]</h4>
+                            <p>Os magos são capazes de manipular o poder da natureza e os elementos para criar feitiços.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardClasses">
+                        <div class="headerCard">GUERREIRO</div>
+                        <input type="radio" class="classe" name="classe" id="guerreiro">
+                            <div class="infoCard">
+                                <h4>[ Guerreiro ]</h4>
+                                <p>Os guerreiros são a classe conhecida por sua força bruta e habilidade com armas.</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardClasses">
+                        <div class="headerCard">ARQUEIRO</div>
+                        <input type="radio" class="classe" name="classe" id="arqueiro">
+                        <div class="infoCard">
+                            <h4>[ Arqueiro ]</h4>
+                            <p>Os arqueiros são versáteis e usam suas habilidades de precisão para derrotar inimigos, eles têm domínio com arco.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           <h3>Escolha um Elemento:</h3>
+            <section class="boxElementos box">
+                <div class="circle">
+                    <input type="radio" name="elemento" class="elemento" id="terra" checked>
+                    <input type="radio" name="elemento" class="elemento" id="agua" >
+                    <input type="radio" name="elemento" class="elemento" id="luz">
+                    <input type="radio" name="elemento" class="elemento" id="fogo">
+                    <input type="radio" name="elemento" class="elemento" id="trevas">
+                    <input type="radio" name="elemento" class="elemento" id="ar">
+                </div>
+                <div class="hexagon"></div>
+            </section>
+            <button>Criar</button>
+        </section>
+        </section>
+        <section class="novosPerson" id="new">
+            
+            <div class="personCriados">
+                <h2>Personagens Criados!</h2>
+                <div class="boxNovos"></div>
+                    
+        </section>
+    </main>
+    <script type="module" src="script.js">
+    </script>
+    <script src="test.js"></script>
+    <script  src="ajusteInput.js"></script>
+    <script type="module" src="interacoesHTML.js"></script>
+</body>
+</html>

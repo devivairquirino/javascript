@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 5px solid gray;
+            border-radius: 10px;
+            width: 600px;
+            height:300px;
+            position: relative;
+        }
+        .bola{
+            position: absolute;
+            
+            border-radius:50%;
+            width:40px;
+            height:40px;
+            
+            animation-name: mov1;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+        }
+        .bola:nth-child(1){
+            background-color:red;
+            animation-duration: 5s;
+            animation-direction: alternate;
+        }
+        .bola:nth-child(2){
+            background-color:blue;
+            animation-duration: 4s;
+        }
+        .bola:nth-child(3){
+            background-color:yellow;
+            animation-duration: 10s;
+            animation-name: mov2;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes mov1 {
+            0%{
+                top:0;
+                left:0;
+            }
+            25%{
+                top:100%;
+                left: 20%;
+                transform: translate(-20%,-100%)
+            }
+            50%{
+                top: 0;
+                left: 40%;
+                transform: translateX(-40%);
+            }
+            75%{
+                top: 100%;
+                left: 60%;
+                transform: translate(-60%,-100%);
+            }
+            100%{
+                top:0;
+                left:100%;
+                transform: translateX(-100%)
+            }
+        }
+        @keyframes mov2 {
+            0%{
+                bottom:0;
+                left:0;
+            }
+            25%{
+                bottom:100%;
+                left: 20%;
+                transform: translate(-20%,100%);
+            }
+            50%{
+                bottom: 0;
+                left: 40%;
+                transform: translateX(-40%);
+            }
+            75%{
+                bottom: 100%;
+                left: 60%;
+                transform: translate(-60%,100%);
+            }
+            100%{
+                bottom:0;
+                left:100%;
+                transform: translateX(-100%)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+    </div>
+</body>
+</html>

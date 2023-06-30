@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(188, 219, 253);
+}
+
+main{
+    max-width: 95%;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 6px rgba(75, 75, 75, 0.562);
+}
+main h1{
+    color: rgb(71, 141, 245);
+    font-size: 1.8em;
+}
+main h2{
+    font-weight: normal;
+    font-size: 1.4em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.c_dados{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.d_pessoais{
+    display: flex;
+    gap: 5px;
+}
+.d_pessoais .c_dados{
+    width: calc(100%/2);
+}
+.c_dados input{
+    height: 25px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: 15px;
+}
+.senha_forte{
+    font-size: 13px;
+    text-align: left;
+    background-color: rgb(173, 219, 255);
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 2px;
+    display: none;
+}
+.requisitos{
+    color: rgb(255, 31, 31);
+
+}
+.requisitos::before{
+    /* content: "\2713"; */
+    content: "\1F5D9";
+}
+.aprovado{
+    color: rgb(0, 185, 0);
+
+}
+.aprovado::before{
+    content: "\2713";
+}
+button#enviar{
+    background-color: rgb(71, 141, 245);
+    width: 220px;
+    margin: auto;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 4px rgba(19, 19, 19, 0.521);
+    transition: transform .3s ease;
+}
+button#enviar:hover{
+    transform: scale(1.02);
+}
+button#enviar:active{
+    transform: scale(0.95);
+}

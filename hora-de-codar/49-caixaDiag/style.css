@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: monospace;
+    font-size: 20px;
+}
+main{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+main a:hover{
+    color: white;
+}
+
+main button{    
+    font-family: monospace;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 95px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+main button:hover{
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+main button:active{
+    transform: scale(0.9);
+}

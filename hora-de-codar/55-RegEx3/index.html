@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cria Conta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>FastBuzz</h1>
+        <h2>Cria uma Conta do FastBuzz</h2>
+        <form>
+            <div class="d_pessoais">
+                <div class="c_dados">
+                    <label for="i_nome">Nome</label>
+                    <input type="text" name="i_nome" id="i_nome">
+                </div>
+                <div class="c_dados">
+                    <label for="i_sobrenome">Sobrenome</label>
+                    <input type="text" name="i_sobrenome" id="i_sobrenome">
+                </div>
+            </div>
+            <div class="c_dados">
+                <label for="i_email">E-mail</label>
+                <input type="text" name="i_email" id="i_email">
+            </div>
+            <div class="c_dados">
+                <label for="i_senha">Senha</label>
+                <input type="text" name="i_senha" id="i_senha">
+                <div class="senha_forte">
+                    <h3>A senha de ter:</h3>
+                    <p class="requisitos">No minímo 6 dígitos</p>
+                    <p class="requisitos">No mínimo 1 caracter especial</p>
+                    <p class="requisitos">Conter números</p>
+                    <p class="requisitos">Conter letras maiúsculas</p>
+                </div>
+            </div>
+            <button id="enviar">Criar Conta</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

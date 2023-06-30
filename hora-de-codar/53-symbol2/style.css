@@ -1,0 +1,19 @@
+body{
+    font-family: monospace;
+    background-color: lightblue;
+}
+h1{
+    font-size: 6em;
+    text-align: center;
+    animation: piscar 0.8s infinite ease alternate;
+}
+@keyframes piscar{
+    to{
+        color: red;
+        
+    }
+    from{
+        color: blue;
+        transform: scale(1.05);
+    }
+}

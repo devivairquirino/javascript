@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+.box-olhos{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.olhos{
+    border: 13px solid black;
+    border-radius: 50%;
+    width: 180px;
+    height:180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.iris-olhos{
+    background-color: black;
+   
+    
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    position: relative;
+    transform-origin: 0;
+}
+.brilho-olhos{
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px
+}
