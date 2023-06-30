@@ -52,10 +52,10 @@ form{
     border-radius: 3px;
     border: 1px solid gray;
     padding: 5px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .senha_forte{
-    font-size: 13px;
+    font-size: 16px;
     text-align: left;
     background-color: rgb(173, 219, 255);
     border: 1px solid black;
@@ -70,8 +70,8 @@ form{
 
 }
 .requisitos::before{
-    /* content: "\2713"; */
-    content: "\1F5D9";
+
+    content: "*";
 }
 .aprovado{
     color: rgb(0, 185, 0);
